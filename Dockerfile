@@ -8,4 +8,5 @@ RUN curl -L https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases/download/v$PHP
     && chmod +x php-cs-fixer \
     && mv php-cs-fixer /usr/local/bin/php-cs-fixer
 
-CMD ["/usr/local/bin/php-cs-fixer", "fix"]
+ENTRYPOINT ["/usr/local/bin/php-cs-fixer"]
+CMD ["fix"]
